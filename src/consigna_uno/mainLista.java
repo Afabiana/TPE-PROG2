@@ -9,28 +9,28 @@ public class mainLista {
 	public static void main(String[] args) {
 		
 		
-		//----------------desarrollo lista de integers----------------
-		
-		Integer a=1;
-		Integer b=10;
-		Integer c=21;
-		Integer d=11;
-		Integer e=5;
-		
-		ComparadorAsc criterio= new ComparadorAsc();
-		
-		ListaVinculada<Integer> lista = new ListaVinculada<Integer>(criterio);
-		
-		lista.addNodoOrd(a);
-		lista.addNodoOrd(b);
-		lista.addNodoOrd(c);
-		lista.addNodoOrd(d);
-		lista.addNodoOrd(e);
+	//----------------desarrollo lista de integers----------------
+
+	Integer a=1;
+	Integer b=10;
+	Integer c=21;
+	Integer d=11;
+	Integer e=5;
+
+	ComparadorAsc criterio= new ComparadorAsc();
+
+	ListaVinculada<Integer> lista = new ListaVinculada<Integer>(criterio);
+
+	lista.addNodoOrd(a);
+	lista.addNodoOrd(b);
+	lista.addNodoOrd(c);
+	lista.addNodoOrd(d);
+	lista.addNodoOrd(e);
 
 		
         
-		//b) Se recorra la lista creada (utilizando un foreach) y se impriman los valores por consola
-		System.out.println("Lista de enteros");
+	//b) Se recorra la lista creada (utilizando un foreach) y se impriman los valores por consola
+	System.out.println("Lista de enteros");
         for(Integer numero : lista) {
             System.out.println(numero);
         }
@@ -66,13 +66,14 @@ public class mainLista {
         ComparadorString compTexto= new ComparadorString();
         
         ListaVinculada<String> textos= new ListaVinculada<String>(compTexto);
-		textos.addNodoOrd(f);
-		textos.addNodoOrd(g);
-		textos.addNodoOrd(h);
-		textos.addNodoOrd(i);
-        
-		//e) Se recorra la lista creada y se impriman los valores por consola
-		System.out.println("\n"+"Lista de strings");
+
+	textos.addNodoOrd(f);
+	textos.addNodoOrd(g);
+	textos.addNodoOrd(h);
+	textos.addNodoOrd(i);
+
+	//e) Se recorra la lista creada y se impriman los valores por consola
+	System.out.println("\n"+"Lista de strings");
 		
         for(String palabra : textos) {
             System.out.println(palabra);
@@ -95,7 +96,7 @@ public class mainLista {
         for(String palabra : textos) {
             System.out.println(palabra);
         }
-        //----------------Consigna 4.i) esta resulta en paquete:consigna_tres-archivo:mainComposite----------------
+        //----------------Consigna 4.i) esta resuelta en paquete:consigna_tres-archivo:mainComposite----------------
       
 	}
 
