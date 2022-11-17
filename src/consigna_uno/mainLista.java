@@ -17,9 +17,9 @@ public class mainLista {
 		Integer d=5;
 		Integer e=11;
 	
-		ComparadorAsc criterio= new ComparadorAsc();
+		ComparadorAsc orden= new ComparadorAsc();
 	
-		ListaVinculada<Integer> lista = new ListaVinculada<Integer>(criterio);
+		ListaVinculada<Integer> lista = new ListaVinculada<Integer>(orden);
 	
 		lista.addNodoOrd(a);
 		lista.addNodoOrd(b);

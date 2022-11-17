@@ -6,7 +6,7 @@ import consigna_uno.ListaVinculada;
 
 public class Grupo extends Elemento{
 	
-	public ListaVinculada<Elemento> elementos;
+	private ListaVinculada<Elemento> elementos;
 	private String nombre;
 	
 	public Grupo(Comparator<Elemento> c, String nombre) {

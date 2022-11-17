@@ -6,15 +6,15 @@ import java.util.Iterator;
 public class ListaVinculada<T> implements Iterable<T> {
 	
 	private Nodo<T> primero;
-	private Comparator<T> criterio;
+	private Comparator<T> orden;
 	
-	public ListaVinculada(Comparator<T> criterio) {
+	public ListaVinculada(Comparator<T> orden) {
 		this.primero = null;
-		this.criterio=criterio;
+		this.orden=orden;
 	}
 	
 	public void setOrden(Comparator<T> c) {
-		this.criterio=c;
+		this.orden=c;
 	}
 	
 
@@ -23,24 +23,24 @@ public class ListaVinculada<T> implements Iterable<T> {
 		//si la lista esta vacia nuevo va a tomar la pos[0]
 		if (this.estaVacia()){
 			
-		    this.primero = nuevo; 
+			this.primero = nuevo; 
 		
-		}else if(this.criterio.compare(primero.getValor(), nuevo.getValor())>=0) {//si primero.valor<||>nuevo.valor 
+		}else if(this.orden.compare(primero.getValor(), nuevo.getValor())>=0) {//si primero.valor<||>nuevo.valor 
 			
 			nuevo.setNodoSiguiente(primero); //primero va a pasar a pos [1]
 			this.primero=nuevo; //nuevo pasa a pos[0]
 			
-		}else {	
+		}else{	
 			Nodo<T> tmp=null;
 			Nodo<T> actual=this.primero;
-			while (actual!=null&&this.criterio.compare(actual.getValor(),nuevo.getValor())<0){
+			while (actual!=null&&this.orden.compare(actual.getValor(),nuevo.getValor())<0){
 				tmp=actual;
 				actual=actual.getNodoSiguiente();
 			}
 			if (actual == null){
                 tmp.setNodoSiguiente(nuevo);
-            }else {
-                Nodo<T> nodoSiguente = tmp.getNodoSiguiente();
+			}else{
+            	Nodo<T> nodoSiguente = tmp.getNodoSiguiente();
                 nuevo.setNodoSiguiente(nodoSiguente);
                 tmp.setNodoSiguiente(nuevo);
             }
@@ -130,7 +130,7 @@ public class ListaVinculada<T> implements Iterable<T> {
 	}
 	
 	//para que tenga sentido, antes de reordenar le voy a setear el comparador
-	//o podria recibir un nuevo comparador y setear desde este metodo idk
+	//o podria recibir un nuevo comparador aca y setear desde este metodo idk
 	public void reordenar() {
 		Nodo<T> aux=this.primero;
 		this.primero=null;
