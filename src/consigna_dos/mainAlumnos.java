@@ -27,12 +27,12 @@ public class mainAlumnos {
 		
 		ListaVinculada<Alumno> alumnos = new ListaVinculada<Alumno>(comp2);
 		
-		alumnos.addNodoOrd(a0);
-		alumnos.addNodoOrd(a1);
-		alumnos.addNodoOrd(a2);
-		alumnos.addNodoOrd(a3);
-		alumnos.addNodoOrd(a4);
-		alumnos.addNodoOrd(a5);
+		alumnos.addOrdenado(a0);
+		alumnos.addOrdenado(a1);
+		alumnos.addOrdenado(a2);
+		alumnos.addOrdenado(a3);
+		alumnos.addOrdenado(a4);
+		alumnos.addOrdenado(a5);
 		
 		for(Alumno a : alumnos) {
 			System.out.println(a);

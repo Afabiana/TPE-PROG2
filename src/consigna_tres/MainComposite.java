@@ -102,8 +102,8 @@ public class MainComposite {
 		//Implementar las siguientes dos estructuras e insértelas en una lista vinculada
 		//ordenadas por cantidad total de alumnos (de mayor a menor)
 		ListaVinculada<Elemento> universidad= new ListaVinculada<Elemento>(c);
-		universidad.addNodoOrd(unicen);
-		universidad.addNodoOrd(olimpiadas);
+		universidad.addOrdenado(unicen);
+		universidad.addOrdenado(olimpiadas);
 		
 		for(Elemento e: universidad)
 			System.out.println(e);

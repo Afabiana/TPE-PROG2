@@ -18,7 +18,7 @@ public class ListaVinculada<T> implements Iterable<T> {
 	}
 	
 
-	public void addNodoOrd(T valor){
+	public void addOrdenado(T valor){
 		Nodo<T> nuevo = new Nodo<T>(valor);
 		//si la lista esta vacia nuevo va a tomar la pos[0]
 		if (this.estaVacia()){
@@ -135,7 +135,7 @@ public class ListaVinculada<T> implements Iterable<T> {
 		Nodo<T> aux=this.primero;
 		this.primero=null;
 		while(aux!=null) {
-			this.addNodoOrd(aux.getValor());
+			this.addOrdenado(aux.getValor());
 			aux=aux.getNodoSiguiente();
 			
 		}

@@ -21,11 +21,11 @@ public class mainLista {
 	
 		ListaVinculada<Integer> lista = new ListaVinculada<Integer>(orden);
 	
-		lista.addNodoOrd(a);
-		lista.addNodoOrd(b);
-		lista.addNodoOrd(c);
-		lista.addNodoOrd(d);
-		lista.addNodoOrd(e);
+		lista.addOrdenado(a);
+		lista.addOrdenado(b);
+		lista.addOrdenado(c);
+		lista.addOrdenado(d);
+		lista.addOrdenado(e);
 	
 			
 	        
@@ -67,10 +67,10 @@ public class mainLista {
 	    
 	    ListaVinculada<String> textos= new ListaVinculada<String>(compTexto);
 	
-		textos.addNodoOrd(f);
-		textos.addNodoOrd(g);
-		textos.addNodoOrd(h);
-		textos.addNodoOrd(i);
+		textos.addOrdenado(f);
+		textos.addOrdenado(g);
+		textos.addOrdenado(h);
+		textos.addOrdenado(i);
 	
 		//e) Se recorra la lista creada y se impriman los valores por consola
 		System.out.println("\n"+"Lista de strings");

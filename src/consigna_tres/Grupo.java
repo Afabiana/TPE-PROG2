@@ -15,7 +15,7 @@ public class Grupo extends Elemento{
 	}
 	
 	public void add(Elemento e) {
-		this.elementos.addNodoOrd(e);
+		this.elementos.addOrdenado(e);
 	}
 	
 	@Override
@@ -34,5 +34,21 @@ public class Grupo extends Elemento{
 		}
 		return res+"]";
 	}
-
+	
+	//ya se puede evaluar si dos grupos son iguales
+	public boolean equals(Object o) {
+		try {
+			int coincidencias=0;
+			Grupo otro = (Grupo) o;
+			for(Elemento elem: this.elementos)
+				for(Elemento ele: otro.elementos)
+					if(ele.equals(elem)) {
+						coincidencias++;
+					}
+			return (coincidencias==this.elementos.size())&&(this.elementos.size()==otro.elementos.size());
+		}
+		catch(Exception e) {
+			return false;
+		}
+	}
 }
