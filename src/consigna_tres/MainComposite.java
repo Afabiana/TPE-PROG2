@@ -1,6 +1,7 @@
 package consigna_tres;
 
 import comparadores.ComparadorCantAlumnos;
+import comparadores.ComparadorInverso;
 import consigna_uno.ListaVinculada;
 
 public class MainComposite {
@@ -8,8 +9,9 @@ public class MainComposite {
 	public static void main(String[] args) {
 		
 		ComparadorCantAlumnos c = new ComparadorCantAlumnos();
+		ComparadorInverso<Elemento> inverso= new ComparadorInverso<Elemento>(c);
 		//generando nodo Historia y sus 3 nodos hijos (flora, martin y roman)
-		Grupo historia= new Grupo(c,"historia");
+		Grupo historia= new Grupo(inverso,"historia");
 		
 		Alumno martin = new Alumno("Martin", "Gomez", 34111222, 34);
 		martin.addInteres("romanos");
@@ -26,7 +28,7 @@ public class MainComposite {
 		historia.add(martin);
 		
 		//generando nodo "humanas"- Nodos hijos(2): nodo historia(generado previamente) y Mora Diaz
-		Grupo humanas= new Grupo(c, "humanas");
+		Grupo humanas= new Grupo(inverso, "humanas");
 		
 		Alumno mora = new Alumno("Mora", "Diaz", 37124425, 34);
 		mora.addInteres("psicologia");
@@ -36,7 +38,7 @@ public class MainComposite {
 		humanas.add(mora);
 		
 		//generando nodo "exactas"- Nodos hijos(2): juana garcia y federico lopez
-		Grupo exactas= new Grupo(c,"exactas");
+		Grupo exactas= new Grupo(inverso,"exactas");
 		
 		Alumno fede = new Alumno("Federico", "Lopez", 35999888, 34);
 		fede.addInteres("redes");
@@ -53,7 +55,7 @@ public class MainComposite {
 		exactas.add(juana);
 		
 		//generando nodo raiz "unicen"- Nodos hijos (3): nodo exactas, humanas y john doe
-		Grupo unicen= new Grupo(c,"unicen");
+		Grupo unicen= new Grupo(inverso,"unicen");
 		
 		Alumno john = new Alumno("John", "Doe", 1200000, 34);
 		john.addInteres("intercambio");
@@ -65,7 +67,7 @@ public class MainComposite {
 		//segunda estructura
 		
 		//generando nodo "los fibo" - Nodos hijos(3): jose paso, bernardino rivas, isaac newton
-		Grupo fibo= new Grupo(c, "los fibo");
+		Grupo fibo= new Grupo(inverso, "los fibo");
 		
 		Alumno bernardino = new Alumno("Bernardino", "Rivas", 30987654, 34);
 		bernardino.addInteres("matematicas");
@@ -81,7 +83,7 @@ public class MainComposite {
 		fibo.add(isaac);
 		
 		//generando nodo "matea2" - Nodos hijos(2): julio cesar y juan juarez
-		Grupo matea2= new Grupo(c,"matea2");
+		Grupo matea2= new Grupo(inverso,"matea2");
 		
 		Alumno juan = new Alumno("Juan", "Juarez", 33222444, 34);
 		juan.addInteres("sucesiones");
@@ -95,13 +97,13 @@ public class MainComposite {
 		matea2.add(julio);
 		
 		//generando nodo raiz "olimpiadas matematicas" - Nodos hijos (2) "matea2" y "los fibo"
-		Grupo olimpiadas=new Grupo(c,"olimpiadas matematicas");
+		Grupo olimpiadas=new Grupo(inverso,"olimpiadas matematicas");
 		olimpiadas.add(matea2);
 		olimpiadas.add(fibo);
 		
 		//Implementar las siguientes dos estructuras e insértelas en una lista vinculada
 		//ordenadas por cantidad total de alumnos (de mayor a menor)
-		ListaVinculada<Elemento> universidad= new ListaVinculada<Elemento>(c);
+		ListaVinculada<Elemento> universidad= new ListaVinculada<Elemento>(inverso);
 		universidad.addOrdenado(unicen);
 		universidad.addOrdenado(olimpiadas);
 		

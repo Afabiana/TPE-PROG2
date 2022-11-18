@@ -130,7 +130,7 @@ public class ListaVinculada<T> implements Iterable<T> {
 	}
 	
 	//para que tenga sentido, antes de reordenar le voy a setear el comparador
-	//o podria recibir un nuevo comparador aca y setear desde este metodo idk
+	//tambien podria recibir un nuevo comparador aca y setear desde este metodo
 	public void reordenar() {
 		Nodo<T> aux=this.primero;
 		this.primero=null;
