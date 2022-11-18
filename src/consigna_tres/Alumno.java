@@ -8,7 +8,6 @@ public class Alumno extends Elemento{
 	private String nombre;
 	private String apellido;
 	private int edad;
-	//private LocalDate nacimiento; //a partir de esta fecha podria calcular edad.
 	private ArrayList<String> intereses;
 	
 	public Alumno(String nombre, String apellido, int dni, int edad) {

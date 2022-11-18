@@ -2,13 +2,13 @@ package consigna_dos;
 
 import java.util.ArrayList;
 
+
 public class Alumno{
 	
 	private int dni;
 	private String nombre;
 	private String apellido;
 	private int edad;
-	//private LocalDate nacimiento; //a partir de esta fecha podria calcular edad.
 	private ArrayList<String> intereses;
 	
 	public Alumno(String nombre, String apellido, int dni, int edad) {
@@ -59,5 +59,15 @@ public class Alumno{
 	
 	public String toString() {
 		return this.getNombre()+" "+this.getApellido()+", "+this.getDni();
+	}
+	
+	public boolean equals(Object o) {
+		try {
+			Alumno otro = (Alumno) o;
+			return this.getDni()==otro.getDni();
+		}
+		catch(Exception e) {
+			return false;
+		}
 	}
 }
